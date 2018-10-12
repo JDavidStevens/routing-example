@@ -20,7 +20,11 @@ class Product extends Component {
         <div className="product-item">
           <img src={image} alt={name} />
           <div className="product-item-details">
-            <h1 style={{ padding: 30 }}>ID: {this.props.match.params.id}</h1>
+            <h1 style={{ padding: 30 }}>
+              {`ID: ${
+                this.props.match.params.id
+              }<== Notice this matches the number next to the '/product/' in the url bar`}
+            </h1>
             <h3>{name}</h3>
             <p>{price}</p>
             <p>{description}</p>
